@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <input id="txt1" type="text">
+    <button id="btn1">cargar</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        
+
+        $("#btn1").click(() =>{
+            var txt = $("#txt1").val()
+            $.get("https://api.github.com/users/"+ txt, function(data){
+                    $("div").html(data.id)
+            })
+
+        })
+        
+
+        $("#btn1").click(() =>{
+            var txt = $("#txt1").val()
+            $.post("http://requestbin.fullcontact.com/1kqgcq81",{name: txt}, function(data){
+                    console.log(data)
+            })
+
+        })
+
+
+    </script>
+</body>
+</html>

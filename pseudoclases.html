@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo clases</title>
+    <style>
+        /*
+        Sintaxis:
+        selector:pseudoclase {propiedad: valor;}
+        */
+
+        /*
+        pseudo clases
+        active, checked, disabled, empty, focus, hover, visited
+        fpseudo elementos
+        first, , first-child, left, last-child, 
+        */
+
+        a{
+            width: 200px;
+            height: 80px;
+            color: white;
+            background-color: brown;
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: 700;
+            padding: 5px;
+            border-radius: 5%;
+        }
+
+        a:hover{
+            background-color: white;
+            color: brown;
+        }
+
+        a:visited{
+                background-color: blueviolet;
+                color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://google.com">Google</a>
+</body>
+</html>

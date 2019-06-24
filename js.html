@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+    <style>
+        body{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-self: center;
+        }
+        .div-g{
+            width:80px;
+            height :80px;
+            
+        }
+        #div1{
+            background-color: red;
+        }
+        #div2{
+            background-color: green;
+        }
+        #div3{
+            background-color: blue;
+        }
+        button{
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-g" id="div1"></div>
+    <div class="div-g" id="div2"></div>
+    <div class="div-g" id="div3"></div>
+    <button id="btn">Click</button>
+    <img src="https://via.placeholder.com/350x150" alt="">
+
+    <button id="btn2">hide</button>
+    <button id="btn3">Show</button>
+    <button id="btn4">Toggle</button>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $("#btn").click(function(){
+        //     $("#div1").fadeIn();
+        //     $("#div2").fadeIn("slow");
+        //     $("#div3").fadeIn(3000);
+        // })
+
+        $("#btn").click(function(){
+            $("#div1").fadeOut();
+            $("#div2").fadeOut("slow");
+            $("#div3").fadeOut(3000);
+        })
+
+        $("#btn2").click(()=>{
+            $("img").hide()
+        })
+
+        $("#btn3").click(()=>{
+            $("img").show()
+        })
+
+        $("#btn4").click(()=>{
+            $("img").toggle(3000)
+        })
+
+
+      
+    </script>
+</body>
+</html>

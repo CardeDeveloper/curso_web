@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cubo</title>
+    <style>
+
+        html{
+            font-size: 100px;
+        }
+        .section{
+            perspective: 800px;
+        }
+        .cubo{
+            width: 2em;
+            margin: 1.5em auto;
+            transform-style: preserve-3d;
+            transform: rotateX(-45deg) rotateY(45deg);
+        }
+
+        .lado{
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        background: rgba(100,100,100,0.5);
+        border: 1px solid red;
+        text-align: center;
+        line-height: 2em;
+
+        }
+        .frente{
+            transform: translateZ(1em);
+        }
+        .atras{
+            transform: rotateY(-180deg) translateZ(1em);
+        }
+        .derecha{
+            transform: rotateY(90deg) translateZ(1em);
+        }
+        .izquierda{
+            transform: rotateY(-90deg) translateZ(1em);
+        }
+
+        .arriba{
+            transform: rotateX(90deg) translateZ(1em);
+        }
+        .abajo{
+            transform: rotateX(-90deg) translateZ(1em);
+        }
+    </style>
+</head>
+<body>
+    <!-- cubo perspectiva de 800 px -->
+    <div class="section">
+        <div class="cubo">
+            <div class="lado frente">1</div>
+            <div class="lado atras">6</div>
+            <div class="lado derecha">4</div>
+            <div class="lado izquierda">3</div>
+            <div class="lado arriba">5</div>
+            <div class="lado abajo">2</div>
+        </div>
+    </div>
+</body>
+</html>
